@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <div id="animate-area">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Play TicTacToe Onboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323&effect=	anaglyph" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header pull-left">
+                    <a class="pull-left">
+                        <div id="logo-img" alt="Logo image"></div>
+                    </a>
+                    <div class="navbar-brand">
+                        <h1>PLAY TIC TAC TOE ONBOARD</h1>
+                        <h2 class="team">-By MarsStormers</h2>
+                        </a>
+
+                    </div>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a class="dropdown-toggle feature" data-toggle="dropdown" href="#">Features <span class="caret"></span></a>
+                        <ul class="dropdown-menu feat">
+                            <li><a href="#">Single Player</a></li>
+                            <li><a href="#">Two Players</a></li>
+                            <li><a href="#">Shuffle X and O</a></li>
+                            <li><a href="#">Difficulty-Levels</a></li>
+                            <li><a href="#">Suggestions</a></li>
+                            <li><a href="#">4x4 Grid</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle howtoplay" data-toggle="dropdown" href="#">How to Play <span class="caret"></span></a>
+                        <ul class="dropdown-menu htplay">
+                            <li><a href="#">Welcome Onboard!
+                                <br>Let's have a quick tour of how to
+                                <br>go about this Game with so many
+                                <br>features together!! 
+                                <br>Your default Game type when you 
+                                <br>first land here is 'Single Player' 
+                                <br>Vs the AI Player. In that case, you
+                                <br>are free to choose your difficulty 
+                                <br>Level from 'Levels', Level 1 being
+                                <br>the easiest! Also,if you need help
+                                <br>at any point while playing you can
+                                <br>click on the 'Suggestions' button
+                                <br>and look for the 'Blinking Cell'. If
+                                <br>you want to switch to two player
+                                <br>mode, You can do that by tapping
+                                <br>on Player 2 but only after clicking
+                                <br>on the EndGame button or before
+                                <br>clicking on the NewGame Button.
+                                <br>Before starting your game in two
+                                <br>Player mode, you are free to cho-
+                                <br>ose from 'X' and 'O'. You can swap 
+                                <br>them by clicking on the glyphicon.  
+                                <br>You can also scale up your grid to
+                                <br>a 4x4 one. 
+                                <br>Hope you enjoy playing it as much
+                                <br>as we enjoyed framing it.
+                                <br>Bon Voyage!
+                      </a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle contactus" data-toggle="dropdown" href="#">Contact Us <span class="caret"></span></a>
+                        <ul class="dropdown-menu contactuss">
+                            <li><a href="#">Vedika Gupta :</a></li>
+                            <li><a href="#">vedikagupta838@gmail.com</a></li>
+                            <li><a href="#">Ashi Gupta :</a></li>
+                            <li><a href="#">ashi52mat@gmail.com</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 well" id="panel">
+
+        <div class="col-md-12">
+            <h1 class="row text-center">PLAY WITH YOUR CREW OR PLAY WITH THE UNBEATABLE!! </h1>
+
+        </div>
+        <div class="col-md-4 col-md-offset-1 text-center settings">
+            <div class="radio row">
+                <span class="players col-md-8" id="p1"> Player 1
+				  	<span class="figureSelector col-md-3" id="f1">X</span>
+                </span>
+            </div>
+
+            <div class="text-center row">
+                <span onclick="ReverseIt()" class="btn btn-info change-figures">
+			          <span class="glyphicon glyphicon-random"></span>
+                </span>
+            </div>
+
+            <div class="radio row">
+
+                <span onclick="activeMultiPlayer()" class="players  col-md-8" id="p2"> Player 2 
+            <span class="figureSelector col-md-3" id="f2">O</span>
+
+                </span>
+
+            </div>
+
+            <div class="end-game row">
+                <span> 
+            <h2>Tap on Player 2 to play with a crew member!</h2>
+            
+            <div class="col-md-6" id="Grid1"><button onClick="ChooseGrid1()" class="btn-lg btn-success active">Grid 3x3</button></div>
+            <div class="col-md-6" id="Grid2"><button onClick="document.location='4x4.html'" class="btn-lg btn-primary active">Grid 4x4</button></div>
+            <h2>Choose your Grid then click on NewGame!</h2>
+                <div class="col-md-6" id="new-game"><button onClick="startGame()" class="btn-lg btn-primary active">New Game</button></div>
+                <div class="col-md-6" id="new-game"><button onClick="endGame()" class="btn-lg btn-primary active">End Game</button></div>
+               
+
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-offset-1 col-xs-12" id="board-game">
+            <table class="Grid1" id="grid">
+                <h2 class="text-center row" id="PresentTurn">- - - - - - - -</h2>
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+            <br>
+            <div class="btn-group disabled lev">                                 
+                <button class="button lev" onclick="SetLevelOne()">Level 1</button> 
+                <button class="button lev" onclick="SetLevelTwo()">Level 2</button>
+                <button class="button lev" onclick="SetLevelThree()">Level 3</button>
+                <button class="button lev" onclick="SetLevelInf()">Infinite</button>
+
+            </div>
+            <br>
+            <div class=" disabled sug" id="suggestions">
+                <button class=" sug" onclick="suggestions()">Suggestions?</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script src="minimax.js "></script>
+    <script>
+        function ChooseGrid2(){
+            location.href='4X4.html';
+        }
+    </script>
+</body>
+</div>
+</html>
